@@ -22,7 +22,7 @@
           alt="avatar"
         />
         <h1 class="card-fullname">Ali Beniamin Ali</h1>
-        <h2 class="card-jobtitle">UI Developer</h2>
+        <h2 class="card-jobtitle">Software Developer</h2>
       </div>
       <div class="card-main">
         <div class="card-section is-active" id="about">
@@ -177,7 +177,14 @@
                 <a href="mailto:alibeniaminali@gmail.com">alibeniaminali@gmail.com</a>  
                 
               </div>
-              <button class="contact-me">WORK TOGETHER</button>
+              <button onclick="window.dialog.show();" class="contact-me">QR CODE</button>
+
+              <dialog id="dialog">
+                Here you can add your QR code.
+                <button onclick="window.dialog.close();">X</button>
+              </dialog>
+
+              
             </div>
           </div>
         </div>
