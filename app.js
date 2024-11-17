@@ -1,20 +1,33 @@
-const buttons = document.querySelectorAll(".card-buttons button");
-const sections = document.querySelectorAll(".card-section");
-const card = document.querySelector(".card");
+const buttons = document.querySelectorAll('.card-buttons button')
+const sections = document.querySelectorAll('.card-section')
+const card = document.querySelector('.card')
+const openQrCodeButton = document.querySelector('#openQrCodeButton')
+const dialog = document.querySelector('dialog')
 
 const handleButtonClick = (e) => {
-  const targetSection = e.target.getAttribute("data-section");
-  const section = document.querySelector(targetSection);
-  targetSection !== "#about"
-    ? card.classList.add("is-active")
-    : card.classList.remove("is-active");
-  card.setAttribute("data-state", targetSection);
-  sections.forEach((s) => s.classList.remove("is-active"));
-  buttons.forEach((b) => b.classList.remove("is-active"));
-  e.target.classList.add("is-active");
-  section.classList.add("is-active");
-};
+  const targetSection = e.target.getAttribute('data-section')
+  const section = document.querySelector(targetSection)
+
+  targetSection !== '#about'
+    ? card.classList.add('is-active')
+    : card.classList.remove('is-active')
+  card.setAttribute('data-state', targetSection)
+  sections.forEach((s) => s.classList.remove('is-active'))
+  buttons.forEach((b) => b.classList.remove('is-active'))
+  e.target.classList.add('is-active')
+  section.classList.add('is-active')
+}
 
 buttons.forEach((btn) => {
-  btn.addEventListener("click", handleButtonClick);
-});
+  btn.addEventListener('click', handleButtonClick)
+})
+
+openQrCodeButton.addEventListener('click', () => {
+  dialog.showModal()
+})
+
+dialog.addEventListener('click', ({ target: dialog }) => {
+  if (dialog.nodeName === 'DIALOG') {
+    dialog.close('dismiss')
+  }
+})

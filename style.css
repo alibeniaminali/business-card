@@ -1,17 +1,13 @@
-@import url("https://fonts.googleapis.com/css?family=DM+Sans:400,500|Jost:400,500,600&display=swap");
+@import url('https://fonts.googleapis.com/css?family=DM+Sans:400,500|Jost:400,500,600&display=swap');
 
 * {
   box-sizing: border-box;
 }
 
-a {
-    text-decoration: none;
-}
 body {
   color: #2b2c48;
-  font-family: "Jost", sans-serif;
+  font-family: 'Jost', sans-serif;
   /* background-image: url(https://images.unsplash.com/photo-1566738780863-f9608f88f3a9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2378&q=80);
-
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -24,10 +20,12 @@ body {
   /* padding: 20px; */
 }
 
+a {
+  text-decoration: none;
+}
 .card {
-  /* max-width: 340px; */
-  /* margin: auto; */
   width: 100%;
+  /* max-width: 700px; */
   overflow-y: auto;
   position: relative;
   z-index: 1;
@@ -40,18 +38,18 @@ body {
   box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.2);
 }
 
-.card[data-state="#about"] {
+.card[data-state='#about'] {
   /* height: 450px; */
-  .card-main {
+  /* .card-main {
     padding-top: 0;
-  }
+  } */
 }
 
-.card[data-state="#contact"] {
+.card[data-state='#contact'] {
   /* height: 430px; */
 }
 
-.card[data-state="#experience"] {
+.card[data-state='#experience'] {
   /* height: 550px; */
 }
 
@@ -181,7 +179,7 @@ body {
   font-size: 14px;
   margin: 0;
   font-weight: 400;
-  font-family: "DM Sans", sans-serif;
+  font-family: 'DM Sans', sans-serif;
 }
 
 .card-social {
@@ -226,7 +224,6 @@ body {
   background-color: #fff;
   margin-top: auto;
   width: 100%;
-  /* position: sticky; */
   position: fixed;
   bottom: 0;
   left: 0;
@@ -241,7 +238,7 @@ body {
     cursor: pointer;
     color: #5c5c6d;
     transition: 0.3s;
-    font-family: "Jost", sans-serif;
+    font-family: 'Jost', sans-serif;
     font-weight: 500;
     outline: 0;
     border-bottom: 3px solid transparent;
@@ -287,13 +284,13 @@ body {
       rgba(134, 214, 243, 0) 0%,
       rgba(81, 106, 204, 1) 100%
     );
-    content: "";
+    content: '';
     left: 42px;
     width: 2px;
     top: 0;
     height: 100%;
     position: absolute;
-    content: "";
+    content: '';
   }
 }
 
@@ -339,7 +336,7 @@ body {
   font-size: 13px;
   color: #6f6f7b;
   line-height: 1.5;
-  font-family: "DM Sans", sans-serif;
+  font-family: 'DM Sans', sans-serif;
 }
 
 .card-contact-wrapper {
@@ -351,7 +348,7 @@ body {
   align-items: center;
   font-size: 13px;
   color: #6f6f7b;
-  font-family: "DM Sans", sans-serif;
+  font-family: 'DM Sans', sans-serif;
   line-height: 1.6;
   cursor: pointer;
 
@@ -391,6 +388,37 @@ body {
   cursor: pointer;
   font-size: 14px;
   font-weight: 500;
-  font-family: "Jost", sans-serif;
+  font-family: 'Jost', sans-serif;
   transition: 0.3s;
+}
+
+dialog {
+  width: 70%;
+  max-width: 300px;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  border-radius: 15px;
+  border: 3px solid #8a84ff85;
+  img {
+    width: 100%;
+    display: block;
+  }
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+dialog[open] {
+  animation: open 1s forwards;
+}
+
+@keyframes open {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

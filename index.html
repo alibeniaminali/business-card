@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta name="description" content="Ex-hospitality professional turned software developer based in London, United Kingdom. This is my personal business card where you can find more information about me">
-    <meta charset="utf-8">
+    <title>Business card - Ali Beniamin Ali</title>
+    <meta charset="UTF-8" />
     <meta name="author" content="Ali Beniamin Ali">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Ex-hospitality professional turned software developer based in London, United Kingdom. This is my personal business card where you can find more information about me">
+    <meta property="og:type" content="Business card" />
+    <meta property="og:image" content="./assets/aboutme.webp">
     <meta property="og:title" content="Personal business card | Ali Beniamin Ali" />
     <meta property="og:description" content="Ali Beniamin Ali - Software developer and drinks enthusiast based in London, United Kingdom." />
-    <meta property="og:image" content="./assets/aboutme.webp">
-    <meta property="og:type" content="Portfolio" />
-    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -177,12 +177,14 @@
                 <a href="mailto:alibeniaminali@gmail.com">alibeniaminali@gmail.com</a>  
                 
               </div>
-              <button onclick="window.dialog.show();" class="contact-me">QR CODE</button>
-
-              <dialog id="dialog">
-                Here you can add your QR code.
-                <button onclick="window.dialog.close();">X</button>
-              </dialog>
+              <button id="openQrCodeButton" class="contact-me">QR CODE</button>
+              <dialog>
+                <img
+                  class="qrcode"
+                  src="./assets/qrcode.png"
+                  alt="qr code"
+                />
+            </dialog>
 
               
             </div>
