@@ -4,11 +4,6 @@
   box-sizing: border-box;
 }
 
-/* width */
-/* ::-webkit-scrollbar {
-  width: 0px;
-} */
-
 body {
   color: #2b2c48;
   font-family: 'Jost', sans-serif;
@@ -35,12 +30,13 @@ a {
   box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.2);
 }
 
-.card[data-state='#about'] {
+/* .card[data-state='#about'] {
   .card-header {
     background-image: url('./assets/wave-haikei.svg');
     background-position-y: 10%;
+    background-repeat: no-repeat;
   }
-}
+} */
 
 .card.is-active {
   .card-header {
@@ -62,13 +58,12 @@ a {
   }
   
   .card-fullname {
-    bottom: 18px;
+    bottom: 13px;
     font-size: 22px;
   }
   
   .card-jobtitle {
-    bottom: 16px;
-    /* letter-spacing: 1px; */
+    bottom: 13px;
     font-size: 10px;
   }
 }
@@ -155,7 +150,6 @@ a {
   display: flex;
   align-items: center;
   padding: 0 20px;
-  /* margin-bottom: 30px; */
   margin-bottom: 70px;
   svg {
     fill: rgb(165, 181, 206);
@@ -386,6 +380,7 @@ dialog[open] {
 @keyframes open {
   from {
     opacity: 0;
+    bottom: -50px;
   }
   to {
     opacity: 1;
